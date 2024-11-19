@@ -1,10 +1,10 @@
 //Государство
-package ru.marinatimosh.app.entity;
+package ru.marinatimosh.app.model;
 
 public class Country {
     private static Country country; // создается экземпляр класса Singleton
     private String name; //
-    private  int population;
+    private int population;
     private int area;
 
 
@@ -26,14 +26,28 @@ public class Country {
         return country;
     }
 
-    //Геттер получения названия Государства
     public String getNameCountry() {
         return name;
     }
 
-    //Геттер получения численности населения Государства
+    public void setNameCountry(String name) {
+        this.name = name;
+    }
+
     public int getPopulationCountry() {
         return population;
+    }
+
+    public void setPopulation(int population){
+        this.population = population;
+    }
+
+    public int getArea(){
+        return area;
+    }
+
+    public void setArea(int area){
+        this.area = area;
     }
 
 }

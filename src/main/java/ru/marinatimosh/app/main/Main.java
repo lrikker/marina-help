@@ -1,4 +1,4 @@
-package ru.marinatimosh.app._main;
+package ru.marinatimosh.app.main;
 
 public class Main {
     public static void main(String[] args) {
