@@ -7,6 +7,8 @@ public class District {
     private int population;
     private int area;
 
+    //массив городов
+
     public District(){
 
     }

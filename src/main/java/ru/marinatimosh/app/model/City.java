@@ -8,6 +8,8 @@ public class City {
     private int area;
     private String status;
 
+    //вместо стринги статус завести булин свойство является ли столицей
+
     public City(){
 
     }

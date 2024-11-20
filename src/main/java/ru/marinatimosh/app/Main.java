@@ -1,5 +1,6 @@
-package ru.marinatimosh.app.main;
+package ru.marinatimosh.app;
 
+import ru.marinatimosh.app.controller.ActionController;
 import ru.marinatimosh.app.model.*;
 import ru.marinatimosh.app.view.GeneralView;
 
@@ -10,8 +11,29 @@ import java.util.Scanner;
 
 
 public class Main {
+
+    public static Country country;
+    public static ActionController controller = new ActionController();
+
     public static void main(String[] args) {
-        Country country = Country.getInstance();
+        controller.createCitizen(5);
+        int averageCitizenAge = controller.getAverageCitizenAge();
+        // сначала наполняем базу
+        // 1 - создаем столицу
+        country = Country.getInstance();
+
+        // 2 - создаем граждан (не забываем в поле страны указать ссылку на country
+
+        // 3 - собрали всех граждан в список
+
+        // засетили в поле граждане страны наш список граждан
+
+        //насоздавали города и сохранили их в список
+        City capital = new City();
+        country.setCapital(capital);
+        // проставили ссылку на столицу
+
+
         final Scanner scanner = new Scanner(System.in);
         System.out.println("Это приложение про  Государство - " + country.getName() + ", выберите интересующую вас информацию:");
         System.out.println(" ");
@@ -99,4 +121,6 @@ public class Main {
 
         }
     }
+
+
 

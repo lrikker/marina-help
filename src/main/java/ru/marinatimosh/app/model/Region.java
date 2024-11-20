@@ -7,6 +7,8 @@ public class Region {
     private int population;
     private int area;
 
+    //массив районов
+
     public Region(){
 
     }
