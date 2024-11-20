@@ -2,52 +2,21 @@
 package ru.marinatimosh.app.model;
 
 public class Country {
-    private static Country country; // создается экземпляр класса Singleton
-    private String name; //
-    private int population;
-    private int area;
+    private static final Country INSTANCE = new Country();
+    private final String name;
 
 
-    //Приватный пустой конструктор:
     private Country() {
-
+        this.name = "Испания"; // Задайте название страны
     }
 
-    //Приватный  конструктор:
-    private Country(String name) {
-        this.name = name;
+    public static Country getInstance() {
+        return INSTANCE;
     }
 
-    // Метод для получения экземпляра класса
-    public static Country getCountry(String name) {
-        if (country == null) {
-            country = new Country(name);
-        }
-        return country;
-    }
-
-    public String getNameCountry() {
+    public String getName() {
         return name;
     }
-
-    public void setNameCountry(String name) {
-        this.name = name;
-    }
-
-    public int getPopulationCountry() {
-        return population;
-    }
-
-    public void setPopulation(int population){
-        this.population = population;
-    }
-
-    public int getArea(){
-        return area;
-    }
-
-    public void setArea(int area){
-        this.area = area;
-    }
-
 }
+
+

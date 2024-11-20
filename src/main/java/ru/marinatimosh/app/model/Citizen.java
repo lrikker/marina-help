@@ -19,7 +19,7 @@ public class Citizen {
 
     //Конструктор гражданина
     public Citizen(int id, String name, String surname, int age, Country country, Region region, District district, City city) {
-        this.id = ++idCount;
+        this.id = idCount++;
         this.age = age;
         this.country = country;
         this.district = district;
