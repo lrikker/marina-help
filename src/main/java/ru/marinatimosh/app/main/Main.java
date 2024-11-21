@@ -11,55 +11,15 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Country country = Country.getInstance();
-        final Scanner scanner = new Scanner(System.in);
-        System.out.println("Это приложение про  Государство - " + country.getName() + ", выберите интересующую вас информацию:");
-        System.out.println(" ");
-        System.out.println("1. Вывести название  столицы");
-        System.out.println("2. Вывести название и количество областей");
-        System.out.println("3. Вывести название и количество  регионов");
-        System.out.println("4. Вывести название и количество  городов");
-        System.out.println("5. Вывести площадь государства");
-        System.out.println("6. Вывести информацию количестве населения в государстве");
-        System.out.println("7. Вывести список граждан начинающихся на букву __");
-        System.out.println("8. Выход");
-        System.out.println(" ");
-        System.out.println("Введи  номер пункта:");
-        int num = scanner.nextInt();
+        Citizen citizen = new Citizen(); // Создаем нового гражданина
+        System.out.println("ID : " + citizen.getId());
+        System.out.println("Возраст: " + citizen.getAge());
+        System.out.println("Имя: " + citizen.getName());
+        System.out.println("Фамилия: " + citizen.getSurname());
 
-        switch (num) {
-            case 1:
-                System.out.println("Выбран пункт 1");
-                break;
-            case 2:
-                System.out.println("Выбран пункт 2");
-                break;
-            case 3:
-                System.out.println("Выбран пункт 3");
-                break;
-            case 4:
-                System.out.println("Выбран пункт 4");
-                break;
-            case 5:
-                System.out.println("Выбран пункт 5");
-                break;
-            case 6:
-                System.out.println("Выбран пункт 6");
-                break;
-            case 7:
-                System.out.println("Выбран пункт 7");
-                break;
-            case 8:
-                System.out.println("Выбран пункт 8");
-                break;
-            default:
-                System.out.println("Такого пункта нет в программе");
-        }
 
-        //Country country = Country.getInstance();
-
-        // Выводим название страны
-      //  System.out.println("Название страны: " + country.getCountry());
+        GeneralView generalView = new GeneralView();
+        generalView.activateMainView();
 
 
        /* private List<Region> regionsList = new ArrayList<>();

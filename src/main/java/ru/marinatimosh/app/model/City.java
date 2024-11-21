@@ -6,13 +6,13 @@ public class City {
     private int code;
     private int population;
     private int area;
-    private String status;
+    private Boolean status;
 
     public City(){
 
     }
 
-    public City(String name, int code, int population, int area, String status) {
+    public City(String name, int code, int population, int area, boolean status) {
         this.name = name;
         this.code = code;
         this.population = population;
