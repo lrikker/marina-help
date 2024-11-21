@@ -1,12 +1,7 @@
-package ru.marinatimosh.app.main;
+package ru.marinatimosh.app;
 
 import ru.marinatimosh.app.model.*;
 import ru.marinatimosh.app.view.GeneralView;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-
 
 
 public class Main {

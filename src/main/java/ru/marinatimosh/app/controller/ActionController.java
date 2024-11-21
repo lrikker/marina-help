@@ -1,5 +1,15 @@
 package ru.marinatimosh.app.controller;
 
-public class ActionController {
+import ru.marinatimosh.app.service.CitizenService;
 
+public class ActionController {
+    CitizenService citizenService;
+
+    public void createCitizen(int count) {
+        citizenService.createCitizen();
+    }
+
+    public void getCitizen() {
+        citizenService.createCitizen();
+    }
 }

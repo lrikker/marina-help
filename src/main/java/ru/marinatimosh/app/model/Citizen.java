@@ -17,6 +17,10 @@ public class Citizen {
     private City city;
 
 
+/*    public Citizen(){
+
+    }*/
+
     public Citizen(){
         this.id = idCount++;
         this.age = generateAge();
@@ -56,6 +60,10 @@ public class Citizen {
 
     public Country getCountry() {
         return country;
+    }
+
+    public void setCountry(Country country) {
+        this.country = country;
     }
 
 
