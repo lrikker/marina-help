@@ -1,9 +1,4 @@
 package ru.marinatimosh.app.controller;
-
-import ru.marinatimosh.app.model.Citizen;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 
@@ -26,13 +21,13 @@ public class DataGenerator {
 
     public static String generateName() {
         Random random = new Random();
-        int index = random.nextInt(names.length); // Генерируем случайный индекс
+        int index = random.nextInt(names.length);
         return names[index];
     }
 
     public static String generateSurname() {
         Random random = new Random();
-        int index = random.nextInt(surnames.length); // Генерируем случайный индекс
+        int index = random.nextInt(surnames.length);
         return surnames[index];
     }
 }

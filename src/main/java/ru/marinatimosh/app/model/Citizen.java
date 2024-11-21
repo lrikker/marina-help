@@ -17,9 +17,7 @@ public class Citizen {
     private City city;
 
 
-/*    public Citizen(){
 
-    }*/
 
     public Citizen(){
         this.id = idCount++;
@@ -83,5 +81,13 @@ public class Citizen {
         return id;
     }
 
-
+    @Override
+    public String toString() {
+        return "Citizen{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }
