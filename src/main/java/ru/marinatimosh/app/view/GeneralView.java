@@ -4,6 +4,8 @@ import ru.marinatimosh.app.controller.ActionController;
 import ru.marinatimosh.app.model.Citizen;
 import ru.marinatimosh.app.model.Country;
 import ru.marinatimosh.app.repository.CitizenRepository;
+import ru.marinatimosh.app.repository.CityRepository;
+import ru.marinatimosh.app.service.CityService;
 
 import java.util.List;
 import java.util.Scanner;
@@ -12,6 +14,12 @@ public class GeneralView {
     Country country = Country.getInstance();
     CitizenRepository citizenRepository = new CitizenRepository();
     ActionController actionController = new ActionController(citizenRepository);
+    ActionController actionController1 = new ActionController();// Вот тут ошибка
+    CityRepository cityRepository = new CityRepository();
+    CityService cityService = new CityService(cityRepository);
+   // ActionController actionController1 = new ActionController(cityService);
+
+
 
     public void activateMainView() {
         final Scanner scanner = new Scanner(System.in);
@@ -44,10 +52,10 @@ public class GeneralView {
                     System.out.println("Количество регионов: "); // нужно добавить getDistrictCount()
                     break;
                 case 4:
-                    System.out.println("Количество городов: "); // нужно добавить  getCityCount()
+                   actionController1.printCityNames(); //тут ошибка
                     break;
                 case 5:
-                    System.out.println("Площадь государства: "); //  getArea()
+                    System.out.println("Площадь государства: " + country.getArea()); //
                     break;
                 case 6:
                     List<Citizen> countedCitizens = actionController.countCitizen();

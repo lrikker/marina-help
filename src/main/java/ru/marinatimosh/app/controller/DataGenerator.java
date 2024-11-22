@@ -3,11 +3,11 @@ import java.util.Random;
 
 
 public class DataGenerator {
-    static String[] names = {"Garcia", "Martinez", "Hernandez", "Lopez", "Gonzalez", "Perez",
+    static String[] namesCitizen = {"Garcia", "Martinez", "Hernandez", "Lopez", "Gonzalez", "Perez",
             "Sanchez", "Romero", "Torres", "Fernandez", "Diaz", "Ramirez", "Cruz", "Morales",
             "Rivera", "Reyes", "Jimenez", "Castillo", "Vasquez", "Guerrero"};
 
-    static String[] surnames = {"Garcia", "Martinez", "Hernandez", "Lopez", "Gonzalez", "Perez",
+    static String[] surnamesCitizen = {"Garcia", "Martinez", "Hernandez", "Lopez", "Gonzalez", "Perez",
             "Sanchez", "Romero", "Torres", "Fernandez", "Diaz", "Ramirez", "Cruz", "Morales",
             "Rivera", "Reyes", "Jimenez", "Castillo", "Vasquez", "Guerrero"};
 
@@ -21,14 +21,14 @@ public class DataGenerator {
 
     public static String generateName() {
         Random random = new Random();
-        int index = random.nextInt(names.length);
-        return names[index];
+        int index = random.nextInt(namesCitizen.length);
+        return namesCitizen[index];
     }
 
     public static String generateSurname() {
         Random random = new Random();
-        int index = random.nextInt(surnames.length);
-        return surnames[index];
+        int index = random.nextInt(surnamesCitizen.length);
+        return surnamesCitizen[index];
     }
 }
 

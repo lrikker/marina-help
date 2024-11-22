@@ -17,17 +17,10 @@ public class Main {
 
         actionController.createCitizen(100000);
 
-
-
         List<Citizen> citizens = actionController.getCitizen();
         generalView.activateMainView();
 
-     /*   for (Citizen citizen : citizens) {
-            System.out.println("ID: " + citizen.getId());
-            System.out.println("Имя: " + citizen.getName());
-            System.out.println("Фамилия: " + citizen.getSurname());
-            System.out.println("Возраст: " + citizen.getAge());
-        }*/
+
 
 
    /*     System.out.println("Список граждан:");
