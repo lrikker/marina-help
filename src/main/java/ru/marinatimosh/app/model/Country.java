@@ -10,14 +10,16 @@ public class Country {
 
     private List<Citizen> citizens = new ArrayList<>();
 
-    private City capital;
+    private final String capital;
     private List<Region> regions;
+
 
     //добавить поля с областями
 
 
     private Country() {
-        this.name = "Испания";
+        this.name = "Spain";
+        this.capital = "Madrid";
         //добавить объекты регионов и засунуть в лист regions
     }
 
@@ -37,13 +39,10 @@ public class Country {
         this.citizens = citizens;
     }
 
-    public City getCapital() {
+    public String  getCapital() {
         return capital;
     }
 
-    public void setCapital(City capital) {
-        this.capital = capital;
-    }
 
     public List<Region> getRegions() {
         return regions;

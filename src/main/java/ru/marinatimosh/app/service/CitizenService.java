@@ -24,13 +24,23 @@ public class CitizenService {
     }
 
     public List<Citizen> countCitizen() {
-        return citizenRepository.getCitizens(); // Получаем список граждан из репозитория
+        return citizenRepository.getCitizens();
     }
 
-  /*  public List<Citizen> getAverageCitizenAge() {
-        return citizenRepository.getCitizens();
-    }*/
+    public int countAverageCitizenAge() {
+        List<Citizen> citizens = citizenRepository.getCitizens();
 
+        if (citizens.isEmpty()) {
+            return 0;
+        }
+
+        int sum = 0;
+        for (Citizen citizen : citizens) {
+            sum += citizen.getAge();
+        }
+
+        return (int) sum / citizens.size();
+    }
 
 
 }

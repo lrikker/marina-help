@@ -69,7 +69,7 @@ public class Citizen {
         return age;
     }
 
-    public String getSurname() {
+/*    public String getSurname() {
         return surname;
     }
 
@@ -79,7 +79,7 @@ public class Citizen {
 
     public long getId() {
         return id;
-    }
+    }*/
 
     @Override
     public String toString() {

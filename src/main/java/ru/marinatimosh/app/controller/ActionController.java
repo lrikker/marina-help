@@ -29,6 +29,12 @@ public class ActionController {
     }
 
     public List<Citizen> countCitizen() {
-        return citizenService.countCitizen(); // Вызываем метод из CitizenService
+        return citizenService.countCitizen();
     }
+
+    public int countAverageCitizenAge() {
+        return citizenService.countAverageCitizenAge();
+    }
+
+
 }
