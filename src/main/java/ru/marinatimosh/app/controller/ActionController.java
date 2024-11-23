@@ -2,7 +2,6 @@ package ru.marinatimosh.app.controller;
 
 import ru.marinatimosh.app.model.Citizen;
 import ru.marinatimosh.app.repository.CitizenRepository;
-import ru.marinatimosh.app.repository.CityRepository;
 import ru.marinatimosh.app.service.CitizenService;
 import ru.marinatimosh.app.service.CityService;
 
@@ -13,12 +12,11 @@ public class ActionController {
     private CitizenService citizenService;
     private CityService cityService;
 
-    public ActionController(CitizenRepository citizenRepository) {
+    public ActionController(CitizenRepository citizenRepository
+            //, CityRepository cityRepository
+    ) {
         citizenService = new CitizenService(citizenRepository);
-    }
-
-    public ActionController(CityRepository cityRepository) {
-        cityService = new CityService(cityRepository);
+        //cityService = new CityService(cityRepository);
     }
 
     public ActionController() {
@@ -36,7 +34,7 @@ public class ActionController {
 
     }
 
-    public List<Citizen> countCitizen() {
+    public int getCitizensAmount() {
         return citizenService.countCitizen();
     }
 

@@ -16,9 +16,6 @@ public class Citizen {
     private District district;
     private City city;
 
-
-
-
     public Citizen(){
         this.id = idCount++;
         this.age = generateAge();

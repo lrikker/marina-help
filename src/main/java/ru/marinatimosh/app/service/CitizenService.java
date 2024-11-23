@@ -23,14 +23,16 @@ public class CitizenService {
         return citizenRepository.getCitizens();
     }
 
-    public List<Citizen> countCitizen() {
-        return citizenRepository.getCitizens();
+    public int countCitizen() {
+        List<Citizen> citizens = citizenRepository.getCitizens();
+        return citizens.size();
     }
+
 
     public int countAverageCitizenAge() {
         List<Citizen> citizens = citizenRepository.getCitizens();
 
-        if (citizens.isEmpty()) {
+        if (citizens == null || citizens.isEmpty()) {
             return 0;
         }
 
