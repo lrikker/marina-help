@@ -8,7 +8,6 @@ import java.util.List;
 
 
 public class CityRepository {
-
     static  String[] nameCity = {"Madrid", "Barcelona", "Valencia", "Seville", "Zaragoza",
             "Malaga", "Bilbao", "Cordoba", "Granada", "Toledo", "Alicante", "Cádiz",
             "Murcia", "Pamplona", "San Sebastián", "Salamanca", "Santiago de Compostela",

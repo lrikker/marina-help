@@ -5,7 +5,6 @@ import ru.marinatimosh.app.model.Citizen;
 import ru.marinatimosh.app.model.Country;
 import ru.marinatimosh.app.repository.CitizenRepository;
 import ru.marinatimosh.app.repository.CityRepository;
-import ru.marinatimosh.app.service.CityService;
 
 import java.util.List;
 import java.util.Scanner;
@@ -13,13 +12,15 @@ import java.util.Scanner;
 public class GeneralView {
     Country country = Country.getInstance();
     CitizenRepository citizenRepository = new CitizenRepository();
-    ActionController actionController = new ActionController(citizenRepository);
-    ActionController actionController1 = new ActionController();// Вот тут ошибка
     CityRepository cityRepository = new CityRepository();
-    CityService cityService = new CityService(cityRepository);
-   // ActionController actionController1 = new ActionController(cityService);
+    //ActionController actionController = new ActionController(citizenRepository, cityRepository);
+    static ActionController actionController = new ActionController(citizenRepository);
 
+    //ActionController actionController = ActionController.getInstance();
 
+    public static void init(){
+        actionController.createCitizen(800);
+    }
 
     public void activateMainView() {
         final Scanner scanner = new Scanner(System.in);
@@ -52,14 +53,14 @@ public class GeneralView {
                     System.out.println("Количество регионов: "); // нужно добавить getDistrictCount()
                     break;
                 case 4:
-                   actionController1.printCityNames(); //тут ошибка
+                   actionController.printCityNames(); //тут ошибка
                     break;
                 case 5:
                     System.out.println("Площадь государства: " + country.getArea()); //
                     break;
                 case 6:
-                    List<Citizen> countedCitizens = actionController.countCitizen();
-                    System.out.println("Количество граждан: " + countedCitizens.size());
+                    int citizensAmount = actionController.getCitizensAmount();
+                    System.out.println("Количество граждан: " + citizensAmount);
                     float averageAge = actionController.countAverageCitizenAge();
                     System.out.println("Средний возраст населения: " + averageAge);
                     break;

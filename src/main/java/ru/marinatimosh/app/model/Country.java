@@ -16,6 +16,10 @@ public class Country {
     private List<District> districts = new ArrayList<>();
     private List<City> cities = new ArrayList<>();
 
+    public void addCitizen(Citizen citizen) {
+        citizens.add(citizen);
+        citizen.setCountry(this);
+    }
 
     //добавить поля с областями
 
@@ -46,7 +50,6 @@ public class Country {
     public String getCapital() {
         return capital;
     }
-
 
     public List<Region> getRegions() {
         return regions;
